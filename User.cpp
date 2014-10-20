@@ -38,7 +38,7 @@ bool loadUser(ifstream &input, tUser &user) {
 	input >> userAux.password;
 	input >> userAux.lastConnection;
 
-	if (userAux.id != "xxx") {
+	if (userAux.id != "End") {
 		loadMessageList(userAux.unread, input, userAux.id);
 		user = userAux;
 

@@ -34,7 +34,7 @@ bool loadUserList(tUserList &list) {
 	tUser userAux;
 	bool sentinel, loaded = false;
 
-	input.open("WCTMP\\usuarios.dat");
+	input.open("WCTMP\\users.dat");
 
 	if (input.is_open()) {
 
@@ -59,13 +59,13 @@ void saveUserList(const tUserList &list) {
 
 	ofstream output;
 
-	output.open("WCTMP\\usuarios.dat");
+	output.open("WCTMP\\users.dat");
 
 	for (int n = 0; n < list.counter; n++) {
 		saveUser(output, *list.users[n]);
 	}
 
-	output << "xxx";
+	output << "End";
 
 	output.close();
 }
